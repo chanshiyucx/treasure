@@ -52,10 +52,10 @@ class Firework {
   constructor() {
     this.canvasEl = null // 画布元素
     this.ctx = null // 画布上下文
-    this.numberOfParticules = 30 // 气泡数量
-    this.colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'] // 气泡颜色
-    this.tapFunc = null // 节流后点击事件
-    this.resizeFunc = null // 节流后窗口缩放事件
+    this.numberOfParticules = 30 // 粒子数量
+    this.colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'] // 粒子颜色
+    this.tapFunc = null
+    this.resizeFunc = null
     this.renderAnime = null
   }
 
@@ -73,6 +73,7 @@ class Firework {
   destroyed() {
     off(document, tap, this.render.bind(this))
     off(window, 'resize', this.setCanvasSize.bind(this))
+    this.tapFunc = this.resizeFunc = this.renderAnime = null
   }
 
   // 设置画布尺寸
@@ -94,7 +95,7 @@ class Firework {
     this.ctx = ctx
   }
 
-  // 创建点击扩散圈
+  // 创建扩散圈
   createCircle(x, y) {
     const ctx = this.ctx
     const p = {}
@@ -116,7 +117,7 @@ class Firework {
     return p
   }
 
-  // 创建点击气泡
+  // 创建粒子
   createParticule(x, y) {
     const ctx = this.ctx
     const p = {}
@@ -134,7 +135,7 @@ class Firework {
     return p
   }
 
-  // 气泡扩散方向
+  // 粒子扩散方向
   setParticuleDirection(p) {
     const angle = (anime.random(0, 360) * Math.PI) / 180
     const value = anime.random(50, 180)
@@ -145,14 +146,14 @@ class Firework {
     }
   }
 
-  // 渲染气泡
+  // 绘制粒子
   renderParticule(anim) {
     for (let i = 0; i < anim.animatables.length; i++) {
       anim.animatables[i].target.draw()
     }
   }
 
-  // 动画开始
+  // 绘制烟火
   animateParticules(x, y) {
     const circle = this.createCircle(x, y)
     const particules = []
@@ -195,6 +196,8 @@ class Firework {
   render(e) {
     const canvasEl = this.canvasEl
     const ctx = this.ctx
+
+    // 绘制前启用擦除画布
     if (!this.renderAnime) {
       this.renderAnime = anime({
         duration: Infinity,
