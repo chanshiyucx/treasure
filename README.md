@@ -4,12 +4,16 @@
 
 ## Firework
 
-[烟火点击效果](https://chanshiyu.com/treasure/firework/)
+[烟火点击效果](//chanshiyu.com/treasure/firework/)
 
 ## Tamayura
 
-[在线简历生成](https://chanshiyu.com/treasure/resume/)
+[在线简历生成](//chanshiyu.com/treasure/resume/)
+
+[SourceCode](//github.com/chanshiyucx/tamayura)
 
 ## MagicSort
 
-[图解排序算法](https://chanshiyu.com/treasure/magicsort/)
+[图解排序算法](//chanshiyu.com/treasure/magicsort/)
+
+[SourceCode](//github.com/chanshiyucx/magic-sort)
