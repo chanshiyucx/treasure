@@ -12,7 +12,7 @@ body {
   width: 360px;
   position: relative;
   padding: 50px;
-  margin: 0 auto;
+  margin: 5vh auto;
 }
 .slideunlock-slider {
   height: 52px;
@@ -33,7 +33,7 @@ body {
 }
 
 .slideunlock-slider.success .slideunlock-label::before {
-  content: '验证成功';
+  content: '验证通过';
   color: #fff;
 }
 

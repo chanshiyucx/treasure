@@ -201,7 +201,6 @@ SliderUnlock.prototype.init = function() {
   })
   addEvent(_slideunlockLabel, 'touchstart', function(event) {
     var e = event || window.event
-    console.log(e)
     _self.lableIndex = e.touches[0].pageX - this.offsetLeft
     _self.handerIn()
   })
