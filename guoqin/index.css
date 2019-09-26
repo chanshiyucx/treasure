@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+  background-color: #2b2b2b;
+}
+
+/* 客服 */
+.service {
+  position: fixed;
+  top: 420px;
+  right: 4%;
+  z-index: 100;
+  width: 50px;
+  cursor: pointer;
+}
+
+/* 头部 */
+.bg {
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: 20%;
+  left: 12px;
+  height: 70%;
+}
+
+/* 主体 */
+.pc {
+  display: none;
+  width: 100%;
+}
+
+.mobile {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: none;
+  }
+
+  .service {
+    width: 60px;
+  }
+
+  .pc {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
