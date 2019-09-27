@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0aa9f1"],{1293:function(t,a,n){"use strict";n.r(a);var e=function(){var t=this,a=t.$createElement,n=t._self._c||a;return n("div",[n("van-nav-bar",{staticClass:"header",attrs:{title:"发现"}})],1)},s=[],l=n("2877"),r={},c=Object(l["a"])(r,e,s,!1,null,null,null);a["default"]=c.exports}}]);
-//# sourceMappingURL=chunk-2d0aa9f1.a710a2bc.js.map

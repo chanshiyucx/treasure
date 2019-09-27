@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0c8073"],{"52aa":function(t,a,n){"use strict";n.r(a);var e=function(){var t=this,a=t.$createElement,n=t._self._c||a;return n("div",[n("van-nav-bar",{staticClass:"header",attrs:{title:"通信录"}})],1)},s=[],c=n("2877"),l={},r=Object(c["a"])(l,e,s,!1,null,null,null);a["default"]=r.exports}}]);
-//# sourceMappingURL=chunk-2d0c8073.3753b46b.js.map
